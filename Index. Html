@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمعية المسعفين المتطوعين سكيكدة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 82, 147, 0.8), rgba(0, 82, 147, 0.8)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .active-nav {
+            color: #005293;
+            font-weight: bold;
+            border-bottom: 3px solid #005293;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- شريط التنقل -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-blue-600 p-2 rounded-full">
+                        <i class="fas fa-first-aid text-white text-2xl"></i>
+                    </div>
+                    <a href="#" class="text-xl font-bold text-blue-800">جمعية المسعفين المتطوعين سكيكدة</a>
+                </div>
+                
+                <!-- روابط التنقل للأجهزة الكبيرة -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="py-2 px-1 text-gray-700 hover:text-blue-600 transition duration-300 active-nav">الرئيسية</a>
+                    <a href="#news" class="py-2 px-1 text-gray-700 hover:text-blue-600 transition duration-300">آخر المستجدات</a>
+                    <a href="#about" class="py-2 px-1 text-gray-700 hover:text-blue-600 transition duration-300">من نحن</a>
+                    <a href="#gallery" class="py-2 px-1 text-gray-700 hover:text-blue-600 transition duration-300">معرض الصور</a>
+                    <a href="#contact" class="py-2 px-1 text-gray-700 hover:text-blue-600 transition duration-300">اتصل بنا</a>
+                </div>
+                
+                <!-- زر القائمة المنسدلة للأجهزة الصغيرة -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- القائمة المنسدلة للأجهزة الصغيرة -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600 transition duration-300">الرئيسية</a>
+                <a href="#news" class="block py-2 text-gray-700 hover:text-blue-600 transition duration-300">آخر المستجدات</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600 transition duration-300">من نحن</a>
+                <a href="#gallery" class="block py-2 text-gray-700 hover:text-blue-600 transition duration-300">معرض الصور</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600 transition duration-300">اتصل بنا</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">جمعية المسعفين المتطوعين سكيكدة</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">نعمل من أجل مجتمع آمن وواعي بالإسعافات الأولية، حيث نقدم الدعم والتدريب للمتطوعين لإنقاذ الأرواح</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-full font-bold transition duration-300">انضم إلينا</a>
+                <a href="#about" class="border-2 border-white hover:bg-blue-700 px-8 py-3 rounded-full font-bold transition duration-300">تعرف علينا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- أهداف الجمعية -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">أهدافنا ورسالتنا</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-hand-holding-medical text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">التوعية المجتمعية</h3>
+                    <p class="text-gray-600">نشر ثقافة الإسعافات الأولية بين أفراد المجتمع وتوعيتهم بأهميتها في إنقاذ الأرواح</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">تدريب المتطوعين</h3>
+                    <p class="text-gray-600">إعداد وتأهيل كوادر متطوعة قادرة على تقديم الإسعافات الأولية بكفاءة واحترافية</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-heartbeat text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">الدعم في الأزمات</h3>
+                    <p class="text-gray-600">المشاركة في تقديم الدعم الإسعافي الأولي أثناء الحوادث والكوارث بالتعاون مع الجهات المختصة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- آخر المستجدات -->
+    <section id="news" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-4">آخر المستجدات</h2>
+            <p class="text-center text-gray-600 mb-12">تابع أحدث أنشطتنا وتكويناتنا</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- خبر 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md news-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="دورة تدريبية" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 text-sm mb-2">
+                            <i class="far fa-calendar-alt ml-2"></i>
+                            <span>15 أكتوبر 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">دورة متقدمة في الإسعافات الأولية</h3>
+                        <p class="text-gray-600 mb-4">نظمت الجمعية دورة تدريبية متقدمة في الإسعافات الأولية استمرت لمدة أسبوعين بمشاركة 30 متطوعاً</p>
+                        <a href="#" class="text-blue-600 font-bold hover:text-blue-800 transition duration-300">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- خبر 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md news-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="رحلة ترفيهية" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 text-sm mb-2">
+                            <i class="far fa-calendar-alt ml-2"></i>
+                            <span>5 أكتوبر 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">رحلة ترفيهية للمتطوعين</h3>
+                        <p class="text-gray-600 mb-4">نظمت الجمعية رحلة ترفيهية للمتطوعين إلى غابة سيدي مسافر، تضمنت أنشطة ترفيهية وتوعوية</p>
+                        <a href="#" class="text-blue-600 font-bold hover:text-blue-800 transition duration-300">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- خبر 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md news-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1629909613651-0ec0abf7ce52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="حملة توعوية" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 text-sm mb-2">
+                            <i class="far fa-calendar-alt ml-2"></i>
+                            <span>20 سبتمبر 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">حملة توعوية في المدارس</h3>
+                        <p class="text-gray-600 mb-4">أطلقت الجمعية حملة توعوية في مدارس سكيكدة حول أساسيات الإسعافات الأولية استفاد منها أكثر من 500 طالب</p>
+                        <a href="#" class="text-blue-600 font-bold hover:text-blue-800 transition duration-300">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-bold transition duration-300">عرض كل الأخبار</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- من نحن -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="فريق الجمعية" class="rounded-lg shadow-lg w-full">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-6">من نحن</h2>
+                    <p class="text-gray-600 mb-4">جمعية المسعفين المتطوعين سكيكدة هي جمعية خيرية تأسست عام 2010 بمبادرة من مجموعة من الشباب المتحمس لخدمة المجتمع في مجال الإسعافات الأولية والإنقاذ.</p>
+                    <p class="text-gray-600 mb-6">تضم الجمعية اليوم أكثر من 150 متطوعاً مدرباً على أعلى مستوى، وقد ساهمت في إنقاذ العشرات من الحالات الطارئة وتوعية الآلاف من المواطنين.</p>
+                    
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">قيمنا</h3>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                            <span class="text-gray-600">الإنسانية أولاً</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                            <span class="text-gray-600">التطوع بلا حدود</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                            <span class="text-gray-600">الاحترافية في العمل</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                            <span class="text-gray-600">العمل الجماعي</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-bold transition duration-300">تعرف على فريقنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- إحصائيات -->
+    <section class="py-16 bg-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2">12+</div>
+                    <div class="text-gray-200">سنوات من العطاء</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">150+</div>
+                    <div class="text-gray-200">متطوع مدرب</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">50+</div>
+                    <div class="text-gray-200">دورة تدريبية</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">5000+</div>
+                    <div class="text-gray-200">مستفيد من خدماتنا</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- معرض الصور والفيديو -->
+    <section id="gallery" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-4">معرض الصور والفيديو</h2>
+            <p class="text-center text-gray-600 mb-12">لحظات من أنشطتنا وتدريباتنا</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="تدريب عملي" class="w-full h-48 object-cover rounded-lg shadow-md">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="حملة توعوية" class="w-full h-48 object-cover rounded-lg shadow-md">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1584466977773-e625c37cdd50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="فريق الجمعية" class="w-full h-48 object-cover rounded-lg shadow-md">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551601651-bc60f254d532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="تدريب على الإنعاش" class="w-full h-48 object-cover rounded-lg shadow-md">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="معدات إسعافية" class="w-full h-48 object-cover rounded-lg shadow-md">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1583900985735-5213c8b0080e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="ورشة عمل" class="w-full h-48 object-cover rounded-lg shadow-md">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="حفل تكريم" class="w-full h-48 object-cover rounded-lg shadow-md">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1584634731339-252c58abf4e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="نشاط ترفيهي" class="w-full h-48 object-cover rounded-lg shadow-md">
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-bold transition duration-300">عرض المزيد</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- اتصل بنا -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-4">اتصل بنا</h2>
+            <p class="text-center text-gray-600 mb-12">يسعدنا تواصلكم معنا لأي استفسار أو مشاركة</p>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">الاسم الكامل</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">البريد الإلكتروني</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">رقم الهاتف</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">الرسالة</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition duration-300">إرسال الرسالة</button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2 bg-gray-50 p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-blue-800 mb-6">معلومات الاتصال</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">العنوان</h4>
+                                <p class="text-gray-600">شارع الاستقلال، رقم 15، سكيكدة، الجزائر</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">الهاتف</h4>
+                                <p class="text-gray-600">+213 123 456 789</p>
+                                <p class="text-gray-600">+213 987 654 321</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">البريد الإلكتروني</h4>
+                                <p class="text-gray-600">contact@skikda-first-aid.dz</p>
+                                <p class="text-gray-600">info@skikda-first-aid.dz</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">أوقات العمل</h4>
+                                <p class="text-gray-600">من الأحد إلى الخميس: 8 صباحاً - 4 مساءً</p>
+                                <p class="text-gray-600">الجمعة والسبت: عطلة</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-blue-800 mt-8 mb-4">تابعنا على</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-blue-400 hover:bg-blue-500 text-white p-3 rounded-full transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- خريطة -->
+    <div class="h-96 bg-gray-200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102689.00810535004!2d6.8520608!3d36.8624992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b0b3a6656d3361%3A0x6d5f394032382518!2sSkikda!5e0!3m2!1sen!2sdz!4v1689681260123!5m2!1sen!2sdz" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">جمعية المسعفين المتطوعين سكيكدة</h3>
+                    <p class="text-blue-200">نعمل من أجل مجتمع آمن وواعي بالإسعافات الأولية، حيث نقدم الدعم والتدريب للمتطوعين لإنقاذ الأرواح</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">روابط سريعة</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-blue-200 hover:text-white transition duration-300">الرئيسية</a></li>
+                        <li><a href="#news" class="text-blue-200 hover:text-white transition duration-300">آخر المستجدات</a></li>
+                        <li><a href="#about" class="text-blue-200 hover:text-white transition duration-300">من نحن</a></li>
+                        <li><a href="#gallery" class="text-blue-200 hover:text-white transition duration-300">معرض الصور</a></li>
+                        <li><a href="#contact" class="text-blue-200 hover:text-white transition duration-300">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">الأنشطة</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-200 hover:text-white transition duration-300">الدورات التدريبية</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition duration-300">حملات التوعية</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition duration-300">الرحلات الترفيهية</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition duration-300">المشاركة في الأحداث</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">النشرة البريدية</h3>
+                    <p class="text-blue-200 mb-4">اشترك في نشرتنا البريدية لتصلك آخر أخبارنا وأنشطتنا</p>
+                    <form class="flex">
+                        <input type="email" placeholder="بريدك الإلكتروني" class="px-4 py-2 rounded-r-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-l-lg transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-300">
+                <p>© 2023 جمعية المسعفين المتطوعين سكيكدة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر العودة للأعلى -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // القائمة المنسدلة للأجهزة الصغيرة
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // زر العودة للأعلى
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // تحديد القسم النشط في شريط التنقل
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active-nav');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
